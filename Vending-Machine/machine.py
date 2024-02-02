@@ -25,7 +25,7 @@ class VendingMachineApp:
         sub_frame = Frame(input_frame, relief=RAISED, bd=10, bg='#3B5A73')
         sub_frame.grid(row=1, column=0, padx=10, pady=10)
 
-        title = Label(sub_frame, text='How many "Snack" do you want ?', bg='#3B5A73', fg='white', width=30,
+        title = Label(sub_frame, text='How many Candy do you want ?', bg='#3B5A73', fg='white', width=30,
                       font='arial 15 bold')
         title.grid(row=1, column=0)
 
@@ -41,7 +41,7 @@ class VendingMachineApp:
         b2.grid(row=4, column=0, padx=25, pady=25)
 
     def create_display_frame(self):
-        display_frame = Text(self.root, width=15, height=22, bd=10, bg='#BB9E7F', font='arial 15 bold', fg='white')
+        display_frame = Text(self.root, width=15, height=22, bd=10, bg='grey', font='arial 15 bold', fg='white')
         display_frame.grid(row=1, column=1, padx=10, pady=10)
         self.txtarea = display_frame
 
@@ -49,7 +49,7 @@ class VendingMachineApp:
         try:
             count = int(self.var.get())
             for _ in range(count):
-                self.txtarea.insert(END, '     Snack\n')
+                self.txtarea.insert(END, '     Candy\n')
             self.clear_entry()
         except ValueError:
             print("Invalid input. Please enter a valid number.")
